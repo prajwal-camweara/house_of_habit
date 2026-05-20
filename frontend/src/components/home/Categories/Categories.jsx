@@ -18,11 +18,11 @@ const Categories = () => {
     <section className={styles.section}>
       <div className={styles.header}>
         <h2 className={styles.title}>Categories</h2>
-        <div className={styles.tabs} role="tablist">
+        <div className={styles.tabs} role='tablist'>
           {categoryTabs.map((tab) => (
             <button
               key={tab}
-              role="tab"
+              role='tab'
               aria-selected={activeTab === tab}
               className={`${styles.tab} ${activeTab === tab ? styles.active : ''}`}
               onClick={() => handleTabClick(tab)}
@@ -48,4 +48,3 @@ const Categories = () => {
 };
 
 export default Categories;
-

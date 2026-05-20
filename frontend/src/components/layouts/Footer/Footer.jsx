@@ -42,7 +42,9 @@ function Footer() {
           <div className={styles.gridAddress}>
             <h4 className={styles.gridTitle}>Address</h4>
             {footerData.address.map((item, i) => (
-              <p key={i}>{item}</p>
+              <>
+                <p key={i}>{item}</p>
+              </>
             ))}
           </div>
           <div className={styles.grid}>
