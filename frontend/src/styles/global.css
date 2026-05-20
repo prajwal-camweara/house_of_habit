@@ -1,0 +1,60 @@
+@import './variables.css';
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+/* Body */
+body {
+  background: #fff;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Buttons */
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+}
+
+/* Container class */
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 max(1.2rem, 1.2dvw);
+}
+
+/* Spinner animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Responsive container ── */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}

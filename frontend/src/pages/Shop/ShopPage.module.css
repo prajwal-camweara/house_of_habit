@@ -1,0 +1,131 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: max(26rem, 26dvw);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.shopNow {
+  flex-shrink: 0;
+}
+.heroContent {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: max(1.2rem, 1.2dvw);
+}
+
+.heroDark .heroTitle,
+.heroDark .heroSub {
+  color: #28282b;
+}
+
+.heroLight .heroTitle,
+.heroLight .heroSub {
+  color: #ffffff;
+}
+
+.heroTitle {
+  font-size: max(4.2rem, 4.2dvw);
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.heroSub {
+  font-size: max(0.9rem, 0.9dvw);
+  font-weight: 400;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.products {
+  padding: max(1rem, 1dvw);
+}
+
+.sectionHeader {
+  text-align: left;
+  margin-bottom: max(1.2rem, 1.2dvw);
+}
+
+.sectionTitle {
+  font-size: max(3rem, 3dvw);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: max(0.2rem, 0.2dvw);
+}
+
+.sectionSub {
+  color: #28282b;
+  font-size: max(0.9rem, 0.9dvw);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.loadMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-xl);
+  font-size: var(--font-sm);
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: clamp(220px, 45vw, 320px);
+    border-radius: var(--border-radius-md);
+  }
+
+  .heroContent {
+    padding: 1.25rem;
+    gap: 0.5rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 200px;
+  }
+
+  .heroContent {
+    padding: 1rem;
+  }
+
+  .heroSub {
+    display: none;
+  }
+
+  .grid {
+    gap: 0.5rem;
+  }
+}

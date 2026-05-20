@@ -1,0 +1,145 @@
+.section {
+  margin-top: max(2rem, 2dvw);
+  padding: max(1rem, 1dvw);
+}
+
+.header {
+  text-align: left;
+  margin-bottom: max(1.2rem, 1.2dvw);
+}
+
+.title {
+  font-size: max(3rem, 3dvw);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: max(0.2rem, 0.2dvw);
+}
+
+.subtitle {
+  color: #28282b;
+  font-size: max(0.9rem, 0.9dvw);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: max(1.2rem, 1.2dvw);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.grid::-webkit-scrollbar {
+  display: none;
+}
+
+.grid>* {
+  flex: 0 0 calc(100% / 3);
+  scroll-snap-align: start;
+}
+
+@media (max-width: 768px) {
+  .grid>* {
+    flex: 0 0 calc(100% / 2);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid>* {
+    flex: 0 0 100%;
+  }
+}
+
+.card {
+  position: relative;
+  min-height: 260px;
+  border-radius: max(1rem, 1dvw);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: max(1rem, 1dvw);
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.textBlock {
+  position: relative;
+  z-index: 9;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: max(0.5rem, 0.5dvw);
+}
+
+.productName {
+  font-size: max(1.2rem, 1.2dvw);
+  font-weight: 400;
+  margin: 0;
+}
+
+.productPrice {
+  font-size: max(1.1rem, 1.1dvw);
+  font-weight: 700;
+  margin: 0;
+}
+
+.buyButton {
+  width: fit-content;
+  background-color: transparent;
+}
+
+.imageWrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .textBlock {
+    width: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    min-height: 320px;
+    padding: var(--space-lg);
+  }
+
+  .textBlock {
+    width: 100%;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imageWrapper img {
+    transform: translateX(0);
+    width: 90%;
+    height: auto;
+    max-height: 180px;
+  }
+}

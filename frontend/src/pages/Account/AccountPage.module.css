@@ -1,0 +1,11 @@
+.layout {
+  display: grid;
+  grid-template-columns: max(17rem, 17dvw) 1fr;
+  gap: max(1.5rem, 1.5dvw);
+  align-items: start;
+  padding: 0 max(2rem, 2dvw) max(3rem, 3dvw);
+}
+
+.content {
+  min-height: max(24rem, 24dvw);
+}

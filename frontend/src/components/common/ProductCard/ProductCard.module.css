@@ -1,0 +1,57 @@
+.card {
+  cursor: pointer;
+}
+
+.imageWrapper {
+  position: relative;
+  background: #fafafa;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 8 / 9;
+  margin-bottom: max(0.75rem, 0.75dvw);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform var(--transition-normal);
+}
+
+.card:hover .image {
+  transform: scale(1.04);
+}
+
+.productDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cartBtn:hover {
+  opacity: 0.85;
+}
+
+/* Always visible on touch / mobile */
+@media (hover: none) {
+  .cartBtn {
+    opacity: 1;
+  }
+}
+
+.name {
+  font-size: max(0.95rem, 0.95dvw);
+  color: #28282b;
+  font-weight: 400;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price {
+  font-size: max(1.1rem, 1.1dvw);
+  font-weight: 700;
+  color: #1e1e1e;
+  font-style: bold;
+}
